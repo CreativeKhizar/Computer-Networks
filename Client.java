@@ -29,7 +29,6 @@ class Client
 		}
 		catch(Exception e)
 		{
-			
 		}
 	}
 }
