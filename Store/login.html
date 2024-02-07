@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Webpage using div</title>
+	<style>
+		body{
+			margin:0px;
+		}
+        .header{
+                padding: 10px;
+                background-color:#455e64;
+                text-align: center;
+               }
+          .header h2{
+          	color: black; }
+              /*===============[Nav CSS]==========*/
+              .nav{
+              	background-color:#243238;
+              	padding: 5px;
+              	}
+             
+              .nav li{
+              list-style: none;
+              display: inline-block;
+	      padding: 5px;
+             margin-left:12%;
+               }
+           .nav a{
+           	color: #fff;
+           }
+           
+          .nav ul li a:hover{
+            text-decoration: none;
+            color: #7fffd4;
+           }
+              .lside{
+              	 float: left;
+               width: 15%;
+               min-height: 440px;
+               background-color: #f0f8ff;
+               text-align: center;
+              }
+           .rside
+           {
+           	text-align: center;
+            float: right;
+           	width: 85%;
+           	  min-height: 440px;
+             background-color: 	#c1cdcd;
+           }
+           .footer{
+             height: 44px;
+            	background-color:#455e64; 
+           	text-align: center; 
+           	padding-top: 10px;}
+
+           	.footer p{
+           		color: 	#8fbc8f;
+           }
+		.lside li{
+			margin-right:55%;
+		}
+	
+	</style>
+</head>
+<body>
+<div>
+	<div class="header">
+		<img src="book.jpg" width="100px" height="70px">
+	  	<h2>ONLINE EBOOKS WEBSITE</h2>
+	</div>
+         	<!-- Nav -->
+      	<div class="nav">
+      			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="registration.html">Registration</a></li>
+				<li><a href="userprofile.html">User Profile</a></li>
+				<li><a href="#">Cart</a></li>
+			</ul>
+      	</div>
+     
+      <!-- main -->
+      	<div style="height:440px">
+      		<div class="rside">	
+			<table align="center">
+			<form>
+					<h2>Login Details</h2>
+					<tr></tr>
+					<tr>
+						<td>
+							<label>User Name : </label>
+						</td>
+						<td>
+							<input type="text" name="un">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Password : </label>
+						</td>
+						<td>
+							<input type="password" name="pass">
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td>
+							<input type="submit" value="SUBMIT">
+							<input type="reset" value="RESET">
+						</td>
+					</tr>
+				</table>
+			</form>
+			</table>
+      		</div>
+      	<!-- side -->
+      		<div class="lside">
+      			<h3>Catalogue</h3>
+			<ul type="none">
+				<li><a href="#">CSE</a></li><br>
+				<li style="margin-right:64%"><a href="#">IT</a></li><br>
+				<li><a href="#">ECE</a></li><br>
+			</ul>
+      		</div>
+      	</div>
+    </div>    
+ </div>
+</body>
+</html>
+
+ 

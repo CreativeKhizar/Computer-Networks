@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Webpage using div</title>
+	<style>
+		body{
+			margin:0px;
+		}
+        .header{
+                padding: 10px;
+                background-color:#455e64;
+                text-align: center;
+               }
+          .header h2{
+          	color: black; }
+              /*===============[Nav CSS]==========*/
+              .nav{
+              	background-color:#243238;
+              	padding: 5px;
+              	}
+             
+              .nav li{
+              list-style: none;
+              display: inline-block;
+	      padding: 5px;
+             margin-left:12%;
+               }
+           .nav a{
+           	color: #fff;
+           }
+           
+          .nav ul li a:hover{
+            text-decoration: none;
+            color: #7fffd4;
+           }
+              .lside{
+              	 float: left;
+               width: 15%;
+               min-height: 440px;
+               background-color: #f0f8ff;
+               text-align: center;
+              }
+           .rside
+           {
+           	text-align: center;
+            float: right;
+           	width: 85%;
+           	  min-height: 440px;
+             background-color: 	#c1cdcd;
+           }
+           .footer{
+             height: 44px;
+            	background-color:#455e64; 
+           	text-align: center; 
+           	padding-top: 10px;}
+
+           	.footer p{
+           		color: 	#8fbc8f;
+           }
+		.lside li{
+			margin-right:55%;
+		}
+	
+	</style>
+</head>
+<body>
+<div>
+	<div class="header">
+		<img src="book.jpg" width="100px" height="70px">
+	  	<h2>ONLINE EBOOKS WEBSITE</h2>
+	</div>
+         	<!-- Nav -->
+      	<div class="nav">
+      			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="registration.html">Registration</a></li>
+				<li><a href="userprofile.html">User Profile</a></li>
+				<li><a href="#">Cart</a></li>
+			</ul>
+      	</div>
+     
+      <!-- main -->
+      	<div style="height:440px">
+      		<div class="rside" text-align="center">	
+			
+				<h2>Welcome to ONLINE EBOOKS WEBSITE</h2>
+				<br><br>
+				<p>Shopping at <span style="font-size:30px">ONLINE</span> EBOOKS WEBSITE</p><br>
+				<p style="margin-left:5%">Shop with us in this special <span style="font-size:28px">discount</span> season and save upto <span style="font-size:28px"> on all your purchases.</span></p>
+      		</div>
+      	<!-- side -->
+      		<div class="lside">
+      			<h3>Catalogue</h3>
+			<ul type="none">
+				<li><a href="#">CSE</a></li><br>
+				<li style="margin-right:64%"><a href="#">IT</a></li><br>
+				<li><a href="#">ECE</a></li><br>
+			</ul>
+      		</div>
+      	</div>
+    </div>    
+ </div>
+</body>
+</html>
+
+ 
