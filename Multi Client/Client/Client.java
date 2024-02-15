@@ -4,20 +4,28 @@ import java.net.*;
 class Read implements Runnable
 {
     Socket s;
+    int flag=1;
     public Read(Socket s)
     {
         this.s=s;
+    }
+    public void setFlag()
+    {
+        this.flag=0;
     }
     public void run()
     {
         try 
         {
+            String message;
             DataInputStream dis=new DataInputStream(s.getInputStream());
-            while(true)
+            while(flag==1)
             {
-                String message=dis.readUTF();
+                message=dis.readUTF();
                 System.out.println(message);
             }
+            s.close();
+            dis.close();
         }
         catch(Exception e)
         {
@@ -38,14 +46,21 @@ class Write implements Runnable
     {
         try
         {
+            String message="";
+
             Scanner scn=new Scanner(System.in);
             DataOutputStream dos=new DataOutputStream(s.getOutputStream());
-            while(true)
+            while(!message.equals("bye"))
             {
-                String message=scn.nextLine();
-                message=user+" : "+message;
-                dos.writeUTF(message);
+                message=scn.nextLine();
+                //message=user+" : "+message;
+                dos.writeUTF(user+" : "+message);
             }
+            message=user+" left the chat ";
+            dos.writeUTF(message);
+            Read r=new Read(s);
+            r.setFlag();
+            dos.close();
         }
         catch(Exception e)
         {
