@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript calculator</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: aquamarine;
+        }
+        .box{
+            padding:40px;
+            margin:20%;
+            background-color: #222;
+            color:aquamarine;
+            line-height: 5px;
+            border-radius: 10px;
+        }
+        .main{
+            width:60%;
+            border-left:5px solid aquamarine;
+            padding:20px;
+            float:left;
+        }
+        .op{
+            width:40%;
+            padding:auto;
+            float:right;
+            line-height: 20px ;
+        }
+        .fix-float{
+            clear:both;
+        }
+        select{
+            width:100%;
+        }
+        input{
+            width:100%;
+            outline: none;
+            text-align: center;
+            border-bottom: 2px solid black;
+        }
+        button{
+            background-color: aquamarine;
+            font-size: large;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="main">
+            <h3>JAVASCRIPT</h3>
+            <h3>CALCULATOR</h3>
+        </div>
+        <div class="op">
+            <input type="numeric" id="one" placeholder="Enter First Number"><br>
+            <input type="numeric" id="two" placeholder="Enter Second Number"><br>
+            <select id="operation">
+                <option value="add">ADD</option>
+                <option value="sub">SUB</option>
+                <option value="mul">MUL</option>
+                <option value="div">DIV</option>
+            </select><br>
+            <button id="btn">Submit</button>
+            <p id="res">Result: </p>
+        </div>
+        <div class="fix-float"></div>
+    </div>
+    <script>
+        const one=document.getElementById("one");
+        const two=document.getElementById("two");
+        const op=document.getElementById("operation");
+        const para=document.getElementById("res");
+        const btn=document.getElementById("btn");
+        
+        btn.onclick=function operation(){
+            console.log(one.value);
+            console.log(two.value);
+            let o=op.value;
+            let res="";
+            if(o=="add")
+            {
+                res=(+one.value)+(+two.value);
+            }
+            else if(o=="sub")
+            {
+                res=(+one.value)-(two.value);
+            }
+            else if(o=="mul")
+            {
+                res=(+one.value)*(+two.value);
+            }
+            else
+            {
+                res=(+one.value)/(+two.value);
+            }
+            para.innerHTML="Result : "+res;
+        }
+        
+    </script>
+</body>
+</html>
