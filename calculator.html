@@ -78,10 +78,23 @@
         const btn=document.getElementById("btn");
         
         btn.onclick=function operation(){
-            console.log(one.value);
-            console.log(two.value);
             let o=op.value;
             let res="";
+            if(!one.value.match("[0-9]+"))
+            {
+              alert("Please Enter Valid Number");
+              return
+            }
+            if(!two.value.match("[0-9]+"))
+            {
+              alert("Please Entet Valid Number");
+              return;
+            }
+            if(o=="div" && +two.value==0)
+            {
+              alert("A number cannot be divisible by Zero");
+              return;
+            }
             if(o=="add")
             {
                 res=(+one.value)+(+two.value);
